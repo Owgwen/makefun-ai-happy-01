@@ -1,0 +1,14 @@
+import os
+
+TEXT = """Hi there, little light-bringer.
+
+I hope you know this: somewhere in the middle of all the big, busy things, you made a difference just by being you. Maybe it was a smile you didn’t notice, a kind thought you sent out, or simply the way you kept going today. That matters.
+
+If your day felt heavy, I’m proud of you for carrying it. If your day felt bright, I’m glad you got to feel that warmth. Either way, you are worthy of rest, of kindness, and of good things finding you.
+
+So here’s a tiny pocket of happiness for you: may your next breath feel a little softer, may something make you laugh when you least expect it, and may you remember—you are appreciated more than you know."""
+
+out = os.path.join(os.path.dirname(__file__), 'entry.txt')
+with open(out, 'w', encoding='utf-8', newline='\n') as f:
+    f.write(TEXT)
+print('wrote', out, len(TEXT))
